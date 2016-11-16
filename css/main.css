@@ -1,0 +1,286 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: url('../nerds-catalog1423.jpg')no-repeat 50% 0px;
+}
+
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.container {
+	width: 880px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+
+.header {
+
+/* временно - размечаем сетку */
+	min-height: 433px;
+}
+
+.main-header {
+	/* временно - размечаем сетку */
+	min-height: 136px;
+}
+
+.logo {
+	float: left;
+	width: 140px;
+	margin-right: 20px;
+
+	/* временно - размечаем сетку */
+	min-height: 136px;
+}
+
+.navigation {
+	float: left;
+	width: 560px;
+
+	/* временно - размечаем сетку */
+	min-height: 136px;
+}
+
+.basket {
+	float: right;
+	width: 100px;
+
+	/* временно - размечаем сетку */
+	min-height: 136px;
+}
+
+.slider {
+
+	/* временно - размечаем сетку */
+	min-height: 300px;
+}
+
+.services {
+	padding: 80px 0;
+
+	/* временно - размечаем сетку */
+	min-height: 300px;
+}
+
+.servieces__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+
+.services__item {
+	display: inline-block;
+	width: 240px;
+	margin-left: 80px;
+	vertical-align: top;
+	
+
+		/* временно - размечаем сетку */
+	min-height: 300px;
+}
+
+.services__item:first-child { margin-left: 0px; }
+
+.promo {
+	padding: 80px 0 60px;
+
+
+}
+
+.promo__colmn-left {
+	float: left;
+	width: 620px;
+
+	/* временно - размечаем сетку */
+	min-height: 320px;
+}
+
+.promo__colmn-right {
+	float: right;
+	width: 240px;
+
+	/* временно - размечаем сетку */
+	min-height: 320px;
+}
+
+.promo__colmn-left,
+.promo__colmn-right {
+	margin-bottom: 20px;
+}
+
+
+
+.partners {
+
+	/* временно - размечаем сетку */
+	min-height: 160px;
+}
+
+.partners__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+
+.partners__item {
+	display:inline-block;
+	width: 240px;
+	margin-left: 80px;
+	vertical-align: middle;
+
+	/* временно - размечаем сетку */
+	min-height: 160px;
+}
+.partners__item:first-child {
+	margin-left: 0;
+}
+
+
+
+/*--------- Footer ----------*/
+.footer {
+	margin-top: 84px;
+}
+
+.map {
+	position: relative;
+
+	/* временно - размечаем сетку */
+	min-height: 416px;
+}
+
+.tile {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: calc((100% - 880px)/2);
+	width: 250px;
+	height: 240px;
+	margin: auto 0;
+}
+
+.footer__content {
+	padding-top: 80px;
+
+	/* временно - размечаем сетку */
+	min-height: 134px;
+}
+
+.social, .footer__promo {
+	display: inline-block;
+	font-size: 0;
+	vertical-align: middle;
+}
+
+.social {
+	width: 240px;
+	padding: 0;
+	margin: 0;
+	margin-right: 70px;
+		list-style: none;
+	font-size: 0;
+
+	/* временно - размечаем сетку */
+	min-height: 62px;
+}
+
+
+.social__item {
+	display: inline-block;
+	width: 63px;
+	height: 63px;
+	margin-left: 24px;
+	vertical-align: middle;
+}
+.social__item:first-child {
+	margin-left: 0;
+}
+
+
+.footer__promo {
+	width: 560px;
+
+	/* временно - размечаем сетку */
+	min-height: 62px;
+}
+
+
+/*------------------------------------
+						Catalog Page
+------------------------------------ */
+
+.page .header {
+	margin-bottom: 80px;
+
+	/* временно - размечаем сетку */
+	min-height: 328px;
+}
+
+.page .main-header {
+	margin-bottom: 20px;
+
+}
+
+.intro {
+
+	/* временно - размечаем сетку */
+	min-height: 108px;
+}
+
+.sidebar {
+	float: left;
+	width: 240px;
+
+	/* временно - размечаем сетку */
+	min-height: 1124px;
+}
+
+.main-content {
+	float: right;
+	width: 560px;
+
+	/* временно - размечаем сетку */
+	min-height: 1124px;
+}
+
+.pagination {
+
+	/* временно - размечаем сетку */
+	min-height: 38px;
+}
+
+
+
+/* Размечаем сетку */
+
+body > * {
+	background: rgba(0, 128, 0, .2);
+	box-shadow: 0 0 0 3px green;
+}
+
+
+
+body > * > * {  /* Центровщики и колонки */
+	background: rgba(255, 45, 82, .2);
+	box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+
+body > * > * > * {
+	background: rgba(234, 255, 45, .2);
+	box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+body > * > * > * >* {
+	background: rgba(0, 0, 255, .2);
+	box-shadow: inset 0 0 0 2px rgb(0, 0, 255);
+}
