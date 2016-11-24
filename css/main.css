@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-	background: url('../nerds-catalog1423.jpg')no-repeat 50% 0px;
+	background: url('../nerds-index1423.jpg')no-repeat 50% 0px;
 }
 
 .clearfix::after {
@@ -27,39 +27,87 @@ body {
 }
 
 .main-header {
-	/* временно - размечаем сетку */
-	min-height: 136px;
+
+	padding: 28px 0 0;
 }
 
 .logo {
 	float: left;
 	width: 140px;
 	margin-right: 20px;
+}
 
-	/* временно - размечаем сетку */
-	min-height: 136px;
+.logo a {
+	display: inline-block;
+	width: 140px;
+}
+
+.logo img {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .navigation {
 	float: left;
 	width: 560px;
+	margin-top: 26px;
+}
 
-	/* временно - размечаем сетку */
-	min-height: 136px;
+.navigation__list {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	list-style: none;
+	text-align: right;
+}
+
+.navigation__item {
+	display: inline-block;
+	margin-left: 45px;
+	vertical-align: middle;
+}
+
+.navigation__item:first-child { margin-left: 0; }
+
+	.navigation__item a, .basket a {
+	font-size: 14px;
+	line-height: 2;
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .basket {
 	float: right;
-	width: 100px;
+	max-width: 100px;
+	margin-top: 26px;
+}
 
-	/* временно - размечаем сетку */
-	min-height: 136px;
+.basket a {
+	padding-left: 36px;
+	font-size: 14px;
+	line-height: 2;
 }
 
 .slider {
-
+	padding-top: 50px;
 	/* временно - размечаем сетку */
 	min-height: 300px;
+}
+
+.slide__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.slider__content {
+	display: inline-block;
+	width: 380px;
+}
+
+.slider__img {
+	float: right
 }
 
 .services {
@@ -253,11 +301,21 @@ body {
 }
 
 .pagination {
+	white-space: nowrap;
 
 	/* временно - размечаем сетку */
 	min-height: 38px;
 }
 
+.pagination a {
+	display: inline-block;
+	min-width: 38px;
+	height: 38px;
+	/* line-height: 38px; */
+	background: #f1f1f1;
+	vertical-align: middle;
+	text-align: center;
+}
 
 
 /* Размечаем сетку */
