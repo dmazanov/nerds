@@ -10,7 +10,7 @@ body {
 	line-height: 1.372; /* 22px*/
 	font-family: 'Roboto', 'Arial', sans-serif;
 	color: #283136;
-	background: url('../nerds-index1423.jpg')no-repeat 50% 0px;
+	/* background: url('../nerds-index1423.jpg')no-repeat 50% 0px; */
 }
 
 /* common style */
@@ -37,6 +37,11 @@ img {
 }
 .icon-vk {
   width: 1.0927734375em;
+  fill: #fff;
+}
+
+.icon-facebook, .icon-instagram {
+	fill: #fff;
 }
 
 /*for example*/
@@ -134,7 +139,7 @@ img {
 /* Header */
 
 .header {
-
+	background: #eeeeee;
 }
 
 .main-header {
@@ -187,6 +192,16 @@ img {
 	text-transform: uppercase;
 }
 
+.navigation__item a:hover,
+.basket:hover a {
+	color: #fb565a;
+}
+
+.navigation__item a:active,
+.basket a:active {
+	color: rgba(0,0,0,.4);
+}
+
 .basket {
 	position: relative;
 	float: right;
@@ -202,7 +217,9 @@ img {
 
 .basket svg {
 	position: absolute;
-	left: 0;
+	left: 4px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .slider {
@@ -246,8 +263,7 @@ img {
 }
 
 .services {
-	margin-bottom: 60px;
-	padding: 80px 0 0;
+	padding: 80px 0 60px;
 	border-bottom: 2px solid #eeeeee;
 }
 
@@ -294,8 +310,7 @@ img {
 }
 
 .promo {
-	margin-bottom: 50px;
-	padding: 70px 0 0;
+	padding: 70px 0 50px;
 	border-bottom: 2px solid #eeeeee;
 }
 
@@ -412,6 +427,8 @@ img {
 
 	/* временно - размечаем сетку */
 	min-height: 160px;
+	padding: 6px 0 0px;
+	border-bottom: 2px solid #eeeeee;
 }
 
 .partners__list {
@@ -422,6 +439,7 @@ img {
 }
 
 .partners__item {
+	position: relative;
 	display:inline-block;
 	width: 240px;
 	margin-left: 80px;
@@ -433,7 +451,21 @@ img {
 .partners__item:first-child {
 	margin-left: 0;
 }
+.partners__item a {
+	display: block;
+}
 
+.partners__pic {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+	opacity: 0.2;
+}
+
+.partners__item a:hover .partners__pic {
+	opacity:1;
+}
 
 
 /*--------- Footer ----------*/
@@ -453,10 +485,24 @@ img {
 	top: 0;
 	bottom: 0;
 	left: calc((100% - 880px)/2);
-	width: 250px;
-	height: 240px;
+	width: 210px;
+	height: 230px;
 	margin: auto 0;
+	padding-top:10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
+
+.tile .name {
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+
+.tile-btn {
+	width: 100%;
+	margin-top: 14px;
+}
+
 
 .footer__content {
 	padding-top: 80px;
@@ -468,7 +514,7 @@ img {
 .social, .footer__promo {
 	display: inline-block;
 	font-size: 0;
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 .social {
@@ -476,8 +522,7 @@ img {
 	padding: 0;
 	margin: 0;
 	margin-right: 70px;
-		list-style: none;
-	font-size: 0;
+	list-style: none;
 
 	/* временно - размечаем сетку */
 	min-height: 62px;
@@ -486,8 +531,6 @@ img {
 
 .social__item {
 	display: inline-block;
-	width: 63px;
-	height: 63px;
 	margin-left: 24px;
 	vertical-align: middle;
 }
@@ -495,6 +538,28 @@ img {
 	margin-left: 0;
 }
 
+.social__item a {
+	display: inline-block;
+	width: 63px;
+	height: 63px;
+	font-size: 23px;
+	line-height: 3;
+	vertical-align: middle;
+	text-align: center;
+	background: #e1e1e1;
+	border-radius: 50%;
+}
+
+.social__item a:hover {
+	background: #fb565a;
+}
+
+.social__item a:active{
+	background: #d6494d;
+	-webkit-box-shadow: inset 0 3px rgba(0,0,0,.15);
+	-moz-box-shadow: inset 0 3px rgba(0,0,0,.15);
+	box-shadow: inset 0 3px rgba(0,0,0,.15);
+}
 
 .footer__promo {
 	width: 560px;
@@ -503,6 +568,21 @@ img {
 	min-height: 62px;
 }
 
+.footer__promo h2 {
+	margin: 0;
+	font-size: 36px;
+	line-height: 1;
+	font-family: 'Roboto', Arial, sans-serif;
+	color: #000;
+}
+
+.footer__promo p {
+	margin-top: 6px;
+	font-size: 16px;
+	line-height: 1.375;
+	font-family: 'Roboto', Arial, sans-serif;
+	color: #283136;
+}
 
 /*------------------------------------
 						Catalog Page
@@ -562,14 +642,14 @@ img {
 
 /* Размечаем сетку */
 
-body > * {
+/* body > * {
 	background: rgba(0, 128, 0, .2);
 	box-shadow: 0 0 0 3px green;
 }
 
 
 
-body > * > * {  /* Центровщики и колонки */
+body > * > * {
 	background: rgba(255, 45, 82, .2);
 	box-shadow: 0 0 0 3px rgb(255, 45, 82);
 }
@@ -583,4 +663,4 @@ body > * > * > * {
 body > * > * > * >* {
 	background: rgba(0, 0, 255, .2);
 	box-shadow: inset 0 0 0 2px rgb(0, 0, 255);
-}
+} */
